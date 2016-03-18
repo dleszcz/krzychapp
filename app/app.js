@@ -9,6 +9,9 @@
                 templateUrl : 'src/auth/view/login.html',
                 controller  : 'AuthController'
             })
+            .when('/main', {
+                templateUrl : 'src/main.html'
+            })
             .otherwise('/', {
                 templateUrl : 'src/auth/view/login.html',
                 controller  : 'AuthController'

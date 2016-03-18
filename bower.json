@@ -19,6 +19,7 @@
     "angular": "~1.5.1",
     "angular-material": "~1.0.6",
     "angular-route": "~1.5.1",
-    "components-font-awesome": "~4.5.0"
+    "components-font-awesome": "~4.5.0",
+    "oauth-js": "oauth.io#~0.5.2"
   }
 }

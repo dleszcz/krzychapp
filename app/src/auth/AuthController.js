@@ -6,12 +6,11 @@
     AuthController.$inject = ['$scope', '$http'];
 
     function AuthController($scope, $http) {
-        console.log('Hi from AuthController');
 
-        var url = 'http://krzychapi.azurewebsites.net/';
+        var url = 'http://krzychapp.azurewebsites.net';
 
         $scope.login = function () {
-            $http.get(url + 'api/Account/ExternalLogin?provider={' + 'facebook' +'}').
+            $http.get(url + '/api/Account/ExternalLogins?returnUrl=%2F&generateState=true').
                 success(function (data) {
                     console.log(data);
                 });
