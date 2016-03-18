@@ -3,12 +3,19 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 
+
 gulp.task('sass', function () {
-    return gulp.src('app/sass/**/*.scss')
+    return gulp.src('app/sass/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('app/assets/css'));
 });
 
 gulp.task('sass:watch', function () {
     gulp.watch('app/sass/**/*.scss', ['sass']);
+});
+
+gulp.task('fonts', function() {
+    return gulp.src([
+        'bower_components/components-font-awesome/fonts/fontawesome-webfont.*'])
+        .pipe(gulp.dest('app/assets/fonts'));
 });
