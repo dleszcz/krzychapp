@@ -1,2 +1,10 @@
 @import '../../bower_components/components-font-awesome/scss/font-awesome';
 @import 'custom/auth';
+
+.angular-google-map-container {
+  min-height: 600px;
+}
+
+.angular-google-map {
+  min-height: 600px;
+}

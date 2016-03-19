@@ -7,10 +7,9 @@
     </md-list-item>
 </md-toolbar>
 
-<div flex layout="row">
-    <md-content flex id="content">
-        <h2>Content</h2>
-        <p>Here goes the map</p>
+<div flex="100" layout="row" layout-align="center stretch" class="map">
+    <md-content layout="column" flex="100" id="content">
+        <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
     </md-content>
 
     <md-sidenav md-is-locked-open="true" class="md-whiteframe-z2">
