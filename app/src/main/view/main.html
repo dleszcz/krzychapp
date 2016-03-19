@@ -1,5 +1,5 @@
 <md-toolbar layout="row">
-    <h3 class="md-title" flex="33">Krzychapp</h3>
+    <h3 class="md-title" flex="33" flex-offset="5">Krzychapp</h3>
     <md-list-item layout-align="end center" flex="66">
         <md-button>Home</md-button>
         <md-button>Add product</md-button>
@@ -13,14 +13,14 @@
     </md-list-item>
 </md-toolbar>
 
-<div flex layout="row">
-    <md-content flex id="content">
-        <h2>Content</h2>
-        <p>Here goes the map</p>
+<div flex="100" layout="row" layout-align="center stretch" class="map">
+    <md-content layout="column" flex="100" id="content">
+        <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
     </md-content>
 
     <md-sidenav md-is-locked-open="true" class="md-whiteframe-z2">
-        <form ng-submit="$event.preventDefault()">
+      <div flex="80" flex-offset="10" layout="row" layout-align="center center">
+        <form ng-submit="$event.preventDefault()" flex layout="column" layout-align="center stretch">
 
             <md-autocomplete
                     md-input-name="tagName"
@@ -56,7 +56,7 @@
             <md-button flex>
                 Filter
             </md-button>
-
         </form>
+      </div>
     </md-sidenav>
 </div>

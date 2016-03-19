@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    var app = angular.module("krzychapp", ['ngRoute', 'ngMaterial', 'facebook']);
+    var app = angular.module("krzychapp", ['ngRoute', 'ngMaterial', 'facebook', 'uiGmapgoogle-maps']);
 
     app.config(function($routeProvider) {
         $routeProvider
