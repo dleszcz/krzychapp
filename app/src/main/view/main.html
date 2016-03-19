@@ -3,7 +3,13 @@
     <md-list-item layout-align="end center" flex="66">
         <md-button>Home</md-button>
         <md-button>Add product</md-button>
-        <md-button>Account</md-button>
+        <div ng-controller="AuthController">
+            <md-button>Account</md-button>
+            <md-button data-ng-disabled="!facebookReady" data-ng-click="logout()">
+                Logout
+            </md-button>
+
+        </div>
     </md-list-item>
 </md-toolbar>
 

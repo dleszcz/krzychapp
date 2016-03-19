@@ -3,17 +3,13 @@
     angular.module('krzychapp')
         .controller('AuthController', AuthController);
 
-    AuthController.$inject = ['$scope', '$http', '$timeout', 'Facebook'];
+    AuthController.$inject = ['$scope', '$http', '$timeout', 'Facebook', '$location'];
 
-    function AuthController($scope, $http, $timeout, Facebook) {
+    function AuthController($scope, $http, $timeout, Facebook, $location) {
 
-        // Define user empty data :/
         $scope.user = {};
-
-        // Defining user logged status
         $scope.logged = false;
 
-        // And some fancy flags to display messages upon user status change
         $scope.byebye = false;
         $scope.salutation = false;
 
@@ -56,6 +52,8 @@
                 if (response.status == 'connected') {
                     $scope.logged = true;
                     $scope.me();
+
+                    $location.path("/userData");
                 }
 
             });
@@ -84,6 +82,7 @@
                 $scope.$apply(function() {
                     $scope.user   = {};
                     $scope.logged = false;
+                    $location.path("/");
                 });
             });
         };
@@ -109,7 +108,6 @@
                     }, 2000)
                 });
             }
-
 
         });
     }

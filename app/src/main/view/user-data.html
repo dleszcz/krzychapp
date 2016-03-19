@@ -1,0 +1,95 @@
+<md-toolbar layout="row">
+    <h3 class="md-title" flex="33">Krzychapp</h3>
+    <md-list-item layout-align="end center" flex="66">
+        <div ng-controller="AuthController">
+            <md-button>Account</md-button>
+            <md-button data-ng-disabled="!facebookReady" data-ng-click="logout()">
+                Logout
+            </md-button>
+
+        </div>
+    </md-list-item>
+</md-toolbar>
+<div layout="column" class="md-inline-form ng-scope layout-column">
+
+    <!--<md-content md-theme="docs-dark" layout-gt-sm="row" layout-padding="" class="layout-padding md-docs-dark-theme layout-gt-sm-row">
+        <div>
+            <md-input-container class="md-docs-dark-theme md-input-has-value">
+                <label for="userName">Name</label>
+                <input ng-model="user.name" class="ng-pristine ng-untouched ng-valid md-input" id="userName" aria-invalid="false"><div class="md-errors-spacer"></div>
+            </md-input-container>
+
+            <md-input-container class="md-docs-dark-theme md-input-has-value">
+                <label for="userSurname">Surname</label>
+                <input ng-model="user.surname" class="ng-pristine ng-untouched ng-valid md-input" id="userSurname" aria-invalid="false"><div class="md-errors-spacer"></div>
+            </md-input-container>
+        </div>
+    </md-content>-->
+
+    <md-content layout-padding="" class="layout-padding">
+        <div>
+            <form
+                    name="userForm"
+                    class="ng-pristine ng-valid ng-valid-mindate ng-valid-maxdate ng-valid-filtered ng-valid-valid ng-valid-required ng-valid-pattern"
+                    ng-submit="submit()">
+
+                <md-content md-theme="docs-dark" layout-gt-sm="row" layout-padding="" class="layout-padding md-docs-dark-theme layout-gt-sm-row">
+                    <div>
+                        <md-input-container class="md-docs-dark-theme md-input-has-value">
+                            <label for="userName">Name</label>
+                            <input ng-model="user.name" class="ng-pristine ng-untouched ng-valid md-input" id="userName" aria-invalid="false"><div class="md-errors-spacer"></div>
+                        </md-input-container>
+
+                        <md-input-container class="md-docs-dark-theme md-input-has-value">
+                            <label for="userSurname">Surname</label>
+                            <input ng-model="user.surname" class="ng-pristine ng-untouched ng-valid md-input" id="userSurname" aria-invalid="false"><div class="md-errors-spacer"></div>
+                        </md-input-container>
+
+                        <md-input-container class="md-docs-dark-theme md-input-has-value">
+                            <label for="userEmail">Email</label>
+                            <input ng-model="user.email" class="ng-pristine ng-untouched ng-valid md-input" id="userEmail" aria-invalid="false"><div class="md-errors-spacer"></div>
+                        </md-input-container>
+
+                        <md-input-container class="md-docs-dark-theme md-input-has-value">
+                            <label for="userPhone">Phone</label>
+                            <input ng-model="user.phone" class="ng-pristine ng-untouched ng-valid md-input" id="userPhone" aria-invalid="false"><div class="md-errors-spacer"></div>
+                        </md-input-container>
+                    </div>
+                </md-content>
+
+                <md-input-container class="md-block md-input-has-value">
+                    <label for="input_243">Address</label>
+                    <input ng-model="user.address" class="ng-pristine ng-valid md-input ng-touched" id="input_243" aria-invalid="false"><div class="md-errors-spacer"></div>
+                </md-input-container>
+
+                <div layout-gt-sm="row" class="layout-gt-sm-row">
+                    <md-input-container class="md-block flex-gt-sm md-input-has-value" flex-gt-sm="">
+                        <label for="input_245">City</label>
+                        <input ng-model="user.city" class="ng-pristine ng-untouched ng-valid md-input" id="input_245" aria-invalid="false"><div class="md-errors-spacer"></div>
+                    </md-input-container>
+
+                    <md-input-container class="md-block flex-gt-sm md-input-has-value" flex-gt-sm="">
+                        <label for="input_246">Country</label>
+                        <input ng-model="user.country" class="ng-pristine ng-untouched ng-valid md-input" id="input_246" aria-invalid="false"><div class="md-errors-spacer"></div>
+                    </md-input-container>
+
+
+                    <md-input-container class="md-block md-input-has-placeholder flex-gt-sm md-input-has-value" flex-gt-sm="">
+                        <label class="md-required" for="input_248">Postal Code</label>
+                        <input name="postalCode" ng-model="user.postalCode" placeholder="12345" required="" ng-pattern="/^[0-9]{5}$/" md-maxlength="5" class="ng-pristine ng-untouched ng-valid md-input ng-valid-required ng-valid-pattern" id="input_248" aria-required="false" aria-invalid="false" ng-trim="false"><div class="md-errors-spacer"><div class="md-char-counter">5/5</div></div>
+
+                        <div ng-messages="userForm.postalCode.$error" role="alert" multiple="" class="md-input-messages-animation md-auto-hide ng-inactive" aria-live="assertive">
+                            <!-- ngMessage: required -->
+                            <!-- ngMessage: pattern -->
+                            <!-- ngMessage: md-maxlength -->
+                        </div>
+                    </md-input-container>
+                </div>
+
+                <input type="submit" id="submit" value="Submit" />
+
+            </form>
+        </div>
+    </md-content>
+
+</div>

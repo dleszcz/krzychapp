@@ -1,12 +1,17 @@
-<div>
-    <div>
-        <div class="alert alert-info" data-ng-show="salutation">Hello, {{user.name}}</div>
-    </div>
 
-    <md-button class="md-button button-login"  type="button" class="btn btn-primary btn-large" data-ng-show="!logged" data-ng-disabled="!facebookReady" data-ng-click="IntentLogin()">
-        Login with Facebook
-    </md-button>
-    <md-button type="button" class="md-button btn btn-danger btn-large" data-ng-show="logged" data-ng-disabled="!facebookReady" data-ng-click="logout()">
-        Logout
-    </md-button>
+<div>
+    <div layout="row">
+        <div flex="40"></div>
+        <div flex>
+            <div>
+                <div class="alert alert-info" data-ng-show="salutation">Hello, {{user.name}}</div>
+            </div>
+
+            <md-button class="md-button button-login"  type="button" class="btn btn-primary btn-large" data-ng-show="!logged" data-ng-disabled="!facebookReady" data-ng-click="IntentLogin()">
+                Login with Facebook
+                <i class="fa fa-facebook"></i>
+            </md-button>
+        </div>
+        <div flex="10"></div>
+    </div>
 </div>
